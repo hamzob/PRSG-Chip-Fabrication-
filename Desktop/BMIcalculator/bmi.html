@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset = "utf-8">
+   <title> bmi-calculator</title>
+  
+</head>
+  <body>
+
+   <h1>Body Mass Index Calculator </h1>
+   <p> Body Mass Index(BMI) is used as an indicator of total body fat. In order to calculate your BMI,  please input your height and weight. The emails in the XML files are banned emails and would not be accepted.</p>
+   <div id="bmiresult"> </div>
+<form method = "post" onsubmit="return masterCall()" id="bmiform" name="BMIform">
+<fieldset>
+   <legend>Vital Statistics</legend>
+   <p>
+   <label>Height:</label>
+   <input name="height" type="number" id="Height" />
+   <label>Units: </label>
+   <select name="unit" id="units" >
+   <option >inches</option>
+   <option >centimeters</option>
+   </select>
+   </p>
+   
+   <p>
+   <label>Weight:</label>
+   <input type="number" name="weight" id="Weight"/>
+   <label>Units: </label>
+   <select name="Unit" id="wunits">
+   <option>pounds</option>
+   <option>kilogram</option>
+   </select>
+   </p>
+   
+   
+   <div id="info"></div>
+   <span>Please check here if you want a detailed analysis of your BMI:<input type="checkbox" name="check" id="bmicheck"/> </span>
+   <hr>
+   <span>Contact information</span>
+   <p>Do you want your BMI sent to you by e-mail? <input onclick="inputEnable()" type="checkbox" id="echecked"/></p> 
+   <p>
+   <label> Email Address:</label>
+   <input type="email"  name="email" id="mail" disabled  />
+   </p>
+   <p>
+   <label> Name: &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;  &nbsp;   &nbsp; </label>
+   <input type="text" pattern="[a-zA-Z]+[\s]+[a-zA-Z]+" name="fullname" id="fullname" disabled />
+   </p>
+   <hr>
+   <span>Processing</span> <br>
+   <span>
+   <button type="submit" value = "Submit">Computer your BMI</button>  <button type="reset" onclick="resetForm()">Reset form</button>
+   </span>
+   <div> <p id="resultsBMI"></p> <p id="emailalert"></p> <p id="bmidetails"></p> <p id="resultweight"></p> <p id="resultheight"> </p> <p id="bannedemail"></p> </div>
+</fieldset>
+</form>
+  
+  <p>
+  Total body fat is correlated to the risk of certain disease which can be potentially fatal. BMI is valid for both men and women. However, it should 
+  only be used as a guideline as it has some limitations. It may overestimate the body fat in muscular persons and underestimate the body fat in persons 
+  who have lost muscle mass.
+  </p>
+  
+  <footer>
+  <p>More information can be found at this <a href="http://www.bmi-calculator.net/">BMI calculator</a> website. This website is based on the formula obtained from that site.</p>
+  </footer>
+  
+     <script type="text/Javascript" src="bmi.js"> </script> 
+	    </body>
+</html>
+   
