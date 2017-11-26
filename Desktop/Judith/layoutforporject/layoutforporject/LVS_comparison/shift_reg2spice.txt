@@ -1,0 +1,12 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\DFlipFlop.asc
+M1 N003 N001 VSS VSS NMOS l=4.8u w=4.8u
+M2 VDD N001 N003 VDD PMOS l=4.8u w=9.6u
+M3 Q N002 VSS VSS NMOS l=4.8u w=4.8u
+M4 VDD N002 Q VDD PMOS l=4.8u w=9.6u
+M5 D PHI1 N001 VSS NMOS l=19.2u w=9.6u
+M6 N003 PHI2 N002 VSS NMOS l=19.2u w=9.6u
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end

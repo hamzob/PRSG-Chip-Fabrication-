@@ -1,0 +1,22 @@
+Circuit: * W:\Desktop\project (2)\project\DFlipFlop_test_bench.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Jan 20 20:47:37 2017
+Total elapsed time: 0.203 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 13943
+traniter = 13913
+tranpoints = 4401
+accept = 3552
+rejected = 849
+matrix size = 14
+fillins = 2
+solver = Normal
+Matrix Compiler1:      46 opcodes  0.3/[0.1]/0.1
+Matrix Compiler2:      98 opcodes  0.2/[0.2]/0.2
+
+

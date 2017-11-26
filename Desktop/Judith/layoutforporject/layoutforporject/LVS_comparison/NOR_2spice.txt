@@ -1,0 +1,10 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\N_OR.asc
+M1 VDD A N001 VDD PMOS l=4.8u w=38.4u
+M2 N001 B VOUT VDD PMOS l=4.8u w=38.4u
+M3 VOUT A VSS VSS NMOS l=4.8u w=4.8u
+M4 VSS B VOUT VSS NMOS l=4.8u w=4.8u
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end

@@ -1,0 +1,23 @@
+Circuit: * W:\Desktop\project (2)\project\clock_test.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Jan 20 19:17:23 2017
+Total elapsed time: 0.719 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 38360
+traniter = 38323
+tranpoints = 11277
+accept = 8180
+rejected = 3097
+matrix size = 18
+fillins = 36
+solver = Normal
+Thread vector: 17.3/7.4[3] 6.5/3.2[3] 2.0/1.0[3] 0.2/0.5[1]  2592/500
+Matrix Compiler1: 3.78 KB object code size  0.8/0.3/[0.2]
+Matrix Compiler2: off  [0.3]/0.3/0.3
+
+

@@ -1,0 +1,18 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\masterclock_generator.asc
+XX1 VDD C1 VSS N001 inverter
+XX2 VDD N001 VSS C2 inverter
+XX3 VDD C2 VSS N002 inverter
+XX4 VDD N002 VSS PHI inverter
+M1 C1 VDD N002 VSS NMOS l=96u w=4.8u
+
+* block symbol definitions
+.subckt inverter VDD VIN VSS VOUT
+M1 VDD VIN VOUT VDD PMOS l=4.8u w=9.6u
+M2 VOUT VIN VSS VSS NMOS l=4.8u w=4.8u
+.ends inverter
+
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end

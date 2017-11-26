@@ -1,0 +1,27 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\XNOR_reset.asc
+XX1 A B VDD N001 VSS na_nd
+XX2 N001 B VDD N003 VSS na_nd
+XX3 A N001 VDD N002 VSS na_nd
+XX4 N002 N003 VDD N004 VSS na_nd
+XX5 N004 RESET VDD VOUT VSS n_or
+
+* block symbol definitions
+.subckt na_nd A B VDD VOUT VSS
+M1 VDD A VOUT VDD PMOS l=4.8u w=9.6u
+M2 VDD B VOUT VDD PMOS l=4.8u w=9.6u
+M3 VOUT A N001 VSS NMOS l=4.8u w=4.8u
+M4 VSS B N001 VSS NMOS l=4.8u w=4.8u
+.ends na_nd
+
+.subckt n_or A B VDD VOUT VSS
+M1 VDD A N001 VDD PMOS l=4.8u w=38.4u
+M2 N001 B VOUT VDD PMOS l=4.8u w=38.4u
+M3 VOUT A VSS VSS NMOS l=4.8u w=4.8u
+M4 VSS B VOUT VSS NMOS l=4.8u w=4.8u
+.ends n_or
+
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end

@@ -1,0 +1,38 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\mainclock.asc
+XPhaseclock N001 PHI1 PHI2 VDD VSS phaseclock
+Xmasterclock C1 C2 N001 VDD VSS masterclock_generator
+
+* block symbol definitions
+.subckt phaseclock PHI PHI1 PHI2 VDD VSS
+XX1 PHI N001 VDD N002 VSS na_nd
+XX2 N002 N003 VDD N001 VSS na_nd
+XX3 VDD N002 VSS PHI1 inverter
+XX4 VDD N001 VSS PHI2 inverter
+XX5 VDD PHI VSS N003 inverter
+.ends phaseclock
+
+.subckt masterclock_generator C1 C2 PHI VDD VSS
+XX1 VDD C1 VSS N001 inverter
+XX2 VDD N001 VSS C2 inverter
+XX3 VDD C2 VSS N002 inverter
+XX4 VDD N002 VSS PHI inverter
+M1 C1 VDD N002 VSS NMOS l=96u w=4.8u
+.ends masterclock_generator
+
+.subckt na_nd A B VDD VOUT VSS
+M1 VDD A VOUT VDD PMOS l=4.8u w=9.6u
+M2 VDD B VOUT VDD PMOS l=4.8u w=9.6u
+M3 VOUT A N001 VSS NMOS l=4.8u w=4.8u
+M4 VSS B N001 VSS NMOS l=4.8u w=4.8u
+.ends na_nd
+
+.subckt inverter VDD VIN VSS VOUT
+M1 VDD VIN VOUT VDD PMOS l=4.8u w=9.6u
+M2 VOUT VIN VSS VSS NMOS l=4.8u w=4.8u
+.ends inverter
+
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end

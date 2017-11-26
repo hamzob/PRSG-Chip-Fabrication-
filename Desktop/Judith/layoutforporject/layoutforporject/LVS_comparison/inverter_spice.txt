@@ -1,0 +1,8 @@
+* W:\Desktop\project(working) -updated\project(working) -updated\project(working) -updated\project\Inverter.asc
+M1 VDD VIN VOUT VDD PMOS l=4.8u w=9.6u
+M2 VOUT VIN VSS VSS NMOS l=4.8u w=4.8u
+.model NMOS NMOS
+.model PMOS PMOS
+*.lib C:\Program Files (x86)\LTC\LTspiceIV\lib\cmp\standard.mos
+.backanno
+.end
